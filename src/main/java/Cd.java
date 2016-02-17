@@ -15,7 +15,19 @@ public class Cd {
     return mTitle;
   }
 
+  public int getId() {
+    return mId;
+  }
+
   public static ArrayList<Cd> all() {
     return instances;
   }
+
+  public static Cd find(int id) {
+  try {
+    return instances.get(id - 1);
+  } catch (IndexOutOfBoundsException e) {
+    return null;
+  }
+}
 }

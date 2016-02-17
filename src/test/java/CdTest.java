@@ -31,8 +31,8 @@ public class CdTest {
 
    @Test
    public void find_returnsCdkWithSameId_secondCd() {
-     Task firstCd = new Task("Let It Be");
-     Task secondCd= new Task("Welcome To The Jungle");
+     Cd firstCd = new Cd("Let It Be");
+     Cd secondCd= new Cd("Welcome To The Jungle");
      assertEquals(Cd.find(secondCd.getId()), secondCd);
    }
 

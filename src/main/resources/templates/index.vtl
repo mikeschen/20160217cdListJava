@@ -1,9 +1,28 @@
-<h1>Title</h1>
+<p>Add a new CD to your list:</p>
 
-<form action='/detector' method='get'>
-  <div class="form-group">
-    <label for="number">Enter Something</label>
-    <input id="number" name="number" class="form-control" type="text">
-  </div>
-   <button type="submit" class="btn">Enter</button>
- </form>
+<form action="/" method="post">
+  <label for="title">CD Album</label>
+  <input id="title" name="title" type="text">
+
+  <button type="submit" class="btn btn-success">Add Album</button>
+</form>
+
+#if ($cds)
+<h1>CD List</h1>
+<ul>
+#foreach ($cd in $cds)
+  <li>$cd.getTitle()</li>
+#end
+</ul>
+#end
+
+<!-- #if ($cds)
+  <h1>$cd.getTitle()</h1>
+#else
+  <h1> CD not found </h1>
+#end
+<ul>
+#foreach ($cd in $cds)
+  <a href="/cds/$cd.getId()">$cd.getTitle()</a>
+#end
+</ul> -->
