@@ -2,17 +2,17 @@ import java.util.ArrayList;
 
 public class Cd {
   private static ArrayList<Cd> instances = new ArrayList<Cd>();
-  private String mTitle;
+  private String mArtist;
   private int mId;
 
-  public Cd (String title) {
-    mTitle = title;
+  public Cd (String artist) {
+    mArtist = artist;
     instances.add(this);
     mId = instances.size();
   }
 
-  public String getTitle() {
-    return mTitle;
+  public String getArtist() {
+    return mArtist;
   }
 
   public int getId() {

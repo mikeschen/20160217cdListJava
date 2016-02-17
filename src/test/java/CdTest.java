@@ -6,33 +6,33 @@ public class CdTest {
 
   @Test
   public void newCd_instatiateCorrectly_true() {
-    Cd testCd = new Cd("Let It Be");
+    Cd testCd = new Cd("Beatles");
     assertEquals(true, testCd instanceof Cd);
   }
 
   @Test
-  public void newCd_displayATitle() {
-  Cd testCd = new Cd("Let It Be");
-  assertEquals("Let It Be", testCd.getTitle());
+  public void newCd_displayAartist() {
+  Cd testCd = new Cd("Beatles");
+  assertEquals("Beatles", testCd.getArtist());
   }
 
   @Test
   public void all_returnsAllInstancesOfCd_true() {
-    Cd firstCd = new Cd("Let It Be");
-    Cd secondCd = new Cd("Welcome To The Jungle");
+    Cd firstCd = new Cd("Beatles");
+    Cd secondCd = new Cd("Guns N Roses");
     assertTrue(Cd.all().contains(firstCd));
     assertTrue(Cd.all().contains(secondCd));
   }
   @Test
    public void newId_cdsInstantiateWithAnID_true() {
-     Cd testCd = new Cd("Let It Be");
+     Cd testCd = new Cd("Beatles");
      assertEquals(Cd.all().size(), testCd.getId());
    }
 
    @Test
    public void find_returnsCdkWithSameId_secondCd() {
-     Cd firstCd = new Cd("Let It Be");
-     Cd secondCd= new Cd("Welcome To The Jungle");
+     Cd firstCd = new Cd("Beatles");
+     Cd secondCd= new Cd("Guns N Roses");
      assertEquals(Cd.find(secondCd.getId()), secondCd);
    }
 

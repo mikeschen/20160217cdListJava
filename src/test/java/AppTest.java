@@ -22,14 +22,14 @@ public class AppTest extends FluentTest {
   @Test
   public void rootTest() {
       goTo("http://localhost:4567/");
-      assertThat(pageSource()).contains("CD Album");
+      assertThat(pageSource()).contains("CD Artist");
   }
 
   @Test
   public void checkIfCdDisplayed() {
       goTo("http://localhost:4567/");
-      fill("#title").with("Let It Be");
+      fill("#artist").with("Beatles");
       submit(".btn");
-      assertThat(pageSource()).contains("Let It Be");
+      assertThat(pageSource()).contains("Beatles");
   }
 }

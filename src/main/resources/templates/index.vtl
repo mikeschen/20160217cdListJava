@@ -1,17 +1,17 @@
-<p>Add a new CD to your list:</p>
+<h1>Add a new CD to your list:</h1>
 
 <form action="/" method="post">
-  <label for="title">CD Album</label>
-  <input id="title" name="title" type="text">
+  <label for="artist">CD Artist</label>
+  <input id="artist" name="artist" type="text">
 
-  <button type="submit" class="btn btn-success">Add Album</button>
+  <button type="submit" class="btn btn-success">Add Artist</button>
 </form>
 
 #if ($cds)
-<h1>CD List</h1>
+<h1>Artists List</h1>
 <ul>
 #foreach ($cd in $cds)
-  <li>$cd.getTitle()</li>
+  <li>$cd.getArtist()</li>
 #end
 </ul>
 #end

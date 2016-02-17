@@ -24,8 +24,8 @@ public class App {
         cds = new ArrayList<Cd>();
         request.session().attribute("cds", cds);
       }
-      String newTitle = request.queryParams("title");
-      Cd newCd = new Cd(newTitle);
+      String newArtist = request.queryParams("artist");
+      Cd newCd = new Cd(newArtist);
 
       cds.add(newCd);
       model.put("cds", cds);
