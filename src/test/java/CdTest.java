@@ -13,7 +13,7 @@ public class CdTest {
   @Test
   public void newCd_displayAartist() {
   Cd testCd = new Cd("Beatles");
-  assertEquals("Beatles", testCd.getArtist());
+  assertEquals("Beatles", testCd.getName());
   }
 
   @Test

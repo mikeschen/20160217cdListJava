@@ -1,0 +1,11 @@
+artists.vtl
+
+<h1>Artists List</h1>
+
+<ul>
+#foreach ($cd in $cds)
+  <li><a href="/artists/$cd.getId()">$cd.getName()</a></li>
+#end
+</ul>
+
+<a href="/artists/new" class="btn btn-default">Add a New Artist</a>

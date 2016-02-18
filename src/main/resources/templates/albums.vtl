@@ -1,0 +1,23 @@
+<h1>Album List</h1>
+
+<h2>Album by its $artist.getName()</h2>
+
+<ul>
+#foreach($album in $albums)
+  #if($album.getArtist().getName().equals($artist.getName()))
+  <li><a href="/artists/$artist.getId()/$album.getId()">$album.getName()</a></li>
+
+  #end
+#end
+</ul>
+
+<div class="form-group">
+  <h2>Add an Album</h2>
+  <form action="/artists/$artist.getId()" method="post">
+    <label for="albumname">Album Name</label>
+    <input id="albumname" name="albumname" type="text" required>
+    <button type="submit" class="btn btn-default" id="albumsubmit">Add Album</button>
+  </form>
+</div>
+
+<a href="/artists" class="btn btn-default">Return to Artists List</a>
